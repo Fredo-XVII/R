@@ -1,0 +1,14 @@
+plot_ly(x = Burn_data_5k$ITEM_OH_Q , type = "box" , 
+        color = (as.factor(interaction( as.factor(Burn_data_5k$QTR_I) , as.factor(Burn_data_5k$STR_REGN_REF_I)  ) )) ,
+        title_name = "STR_REGION_I by Quarter" 
+)
+
+-----
+
+BXPLT_F <- function(x, color, title_name){
+  plot_ly(x = x , type = 'box' , boxpoints = "all", jitter = 0.5, pointpos = -1.5 , color = color) %>%
+    layout(title = sprintf('BATCH BURN BY %s', title_name) )
+}
+
+#TEST
+#BXPLT_F(x = Burn_data$ITEM_OH_Q, color = as.factor(Burn_data$LGRP_C) , title_name = "LGRP_C" )

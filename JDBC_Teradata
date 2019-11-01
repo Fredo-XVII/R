@@ -1,0 +1,28 @@
+
+library(RJDBC)
+sessionInfo()
+Sys.getenv()
+Sys.setenv(CLASSPATH="<path_from_above>")
+
+# Set Teradata username and password 
+tdid <- "XXXXXX"   # "Teradata Username"
+tdpwd <- rs.askForPassword("Teradata Password:")
+
+### This code is working to the next ###
+#Set JDBC driver connection
+  ## NOTE: A path on a UNIX machine would use single forward slashes to separate its components and a colon between files.
+TeradataConnect <-
+  dbConnect(
+    TeradataDriver,
+    "jdbc:teradata://tdproda/LOGMECH=LDAP", as.character(tdid) , as.character(.rs.askForPassword("pwd:"))
+    
+  #  as.character(subset(
+   #   read.csv("Z:\\filename.csv"), Database == "EDW"
+  #  )$username),
+   # as.character(subset(
+    #  read.csv("Z:\\filename.csv"), Database == "EDW"
+  #  )$password)
+  )
+
+test <- dbGetQuery(TeradataConnect, "select top 10 * from prodrpt_v.cal_date_dim_v")
+test

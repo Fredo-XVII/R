@@ -1,0 +1,36 @@
+---
+title: "TITLE"
+author: 
+date: MONTH, YEAR
+output:
+  html_notebook:
+    toc: TRUE
+    toc_depth: 4
+    toc_float: TRUE 
+      #collapsed: TRUE
+      #smooth_scroll: TRUE
+    code_folding: hide
+    df_print: paged
+
+---
+
+```{r setup, echo=FALSE, message=FALSE, results = 'hide'}
+
+knitr::opts_chunk$set(
+  cache = TRUE, 
+  cache.path = "cache/", 
+  fig.width = .67, 
+  fig.height = 24,
+  #fig.width=24,
+  fig.align='center',
+  message = FALSE, 
+  warning = FALSE,
+  fig.retina = 1)
+
+options(tibble.print_min = 50, tibble.width = Inf)
+```
+
+[AdvanceAnalytics](<HOME PAGE LINK>) - Home page for Stores EDABI Advance Analytics.
+
+[GitHub](<GIT PROJECT LINK>) - Github repo for the project.
+ 

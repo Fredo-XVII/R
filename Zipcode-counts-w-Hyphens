@@ -1,0 +1,47 @@
+txt <- "00716, 00717, 00728, 00730-00734"
+txt_2 <- as.list(gsub(',' , '' , txt))
+
+  for (i in txt_2) {
+    counter = 0 
+    print(counter)
+    txt_3 <- as.list(strsplit(i, " "))
+    print(txt_3)
+    for (j in (txt_3 )) {
+      print(length(j))
+      for (k in 1:length(j)) {
+        print(paste(k, j[k]))
+        if (grepl('-' , j[k]) == TRUE){
+          print("dash found")
+          txt_4 <- strsplit(j[k], "-")[[1]]
+          print(paste0(str(txt_4) , txt_4[2], txt_4[1] ) )
+          
+          hyphen_cnt = as.numeric(txt_4[2]) - as.numeric(txt_4[1]) + 1
+          print(hyphen_cnt)
+          counter = counter + hyphen_cnt
+          print( paste("this is the count between hyphen:" , hyphen_cnt ) )
+          
+        } else {counter = counter + 1 }
+                #return( counter ) }
+                
+      } #return (counter) 
+    } #return( counter ) 
+  }
+print(counter)
+
+## Wrapped in Function and comments removed by Ralph Asher
+
+countzips <- function(textinput){
+
+txt_2 <- as.list(gsub(',' , '' , textinput))
+for (i in txt_2) {
+  counter = 0 
+  txt_3 <- as.list(strsplit(i, " "))
+  for (j in (txt_3 )) {
+    for (k in 1:length(j)) {
+      if (grepl('-' , j[k]) == TRUE){
+        txt_4 <- strsplit(j[k], "-")[[1]]
+        hyphen_cnt = as.numeric(txt_4[2]) - as.numeric(txt_4[1]) + 1
+        counter = counter + hyphen_cnt
+      } else {counter = counter + 1 }
+}}}
+return(counter)}

@@ -1,0 +1,18 @@
+# Mapping packages
+
+library('maps')
+library('rgdal')
+library('sp')
+library('tigris')
+library('acs')
+library('leaflet')
+library('ggmap')
+library('maptools')
+library('geosphere')
+library('stplanr')
+library('rvest') ##  borrowing data from web
+
+# geo-coded from the data science took kit website (dsk)
+lilbrary(ggmap)
+geoout <- ggmap:::geocode(location='Lexington KY',output='more',source='dsk')
+str(geoout)

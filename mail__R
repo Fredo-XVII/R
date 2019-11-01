@@ -1,0 +1,13 @@
+library(mailR)
+sender <- "email@co.com"
+recipients <- c("email@co.com")
+send.mail(from = sender,
+          to = recipients,
+          subject = "Subject of the email",
+          body = "Body of the email",
+          encoding = "utf-8",
+          smtp = list(host.name = "co.com", port = 465, # 
+                      user.name = "email",            
+                      passwd = "XXXX", ssl = TRUE),
+          authenticate = TRUE,
+          send = TRUE)
