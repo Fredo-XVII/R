@@ -46,3 +46,5 @@ options(tibble.print_min = 50, tibble.width = Inf)
                       fig.show = 'hide', # suppress plots
                       cache = TRUE)      # enable caching
                                           
+If you have multiple plots, you can reference all of them using the following syntax: 
+`{r Figures, ref.label=c("Plot 1", "Plot 2", "Plot 3"), fig.show="as.is"}`
