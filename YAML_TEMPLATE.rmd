@@ -34,3 +34,15 @@ options(tibble.print_min = 50, tibble.width = Inf)
 
 [GitHub](<GIT PROJECT LINK>) - Github repo for the project.
  
+### Source
+ - https://rstudio-pubs-static.s3.amazonaws.com/391670_fbefa931679847e0aed6adfeaf8631a3.html
+ 
+ knitr::opts_chunk$set(echo = TRUE) # Optional based on whether to call chunks later.
+ knitr::opts_chunk$set(error = FALSE,     # suppress errors
+                      message = FALSE,   # suppress messages
+                      warning = FALSE,   # suppress warnings
+                      results = 'hide',  # suppress code output
+                      echo = FALSE,      # suppress code
+                      fig.show = 'hide', # suppress plots
+                      cache = TRUE)      # enable caching
+                                          
