@@ -122,3 +122,14 @@ https://csgillespie.github.io/efficientR/3-3-r-startup.html
   - No. 1 - Hadleys book bove: 
   - Looks like a nice resource: https://kbroman.org/pkg_primer/
     - Great layman explanation of software licenses: MIT vs. GPL
+
+-----
+
+### Meta Programming
+   - Parameterize Model functions:
+     - https://stackoverflow.com/questions/14046195/r-pass-function-in-as-variable
+     - https://rlang.r-lib.org/reference/topic-defuse.html
+     - https://adv-r.hadley.nz/functionals.html
+     - https://stat.ethz.ch/R-manual/R-devel/library/stats/html/formula.html
+
+-----
